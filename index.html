@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Countdown Timer</title>
+<script type="text/javascript">
+function startTimer()
+{
+   var obj = document.getElementById("timer");
+   var seconds;
+
+
+   seconds = Number(obj.display.value);
+   if (seconds <= 0)    
+   {
+   clearInterval(Id);
+      seconds = 0;
+   }
+    else
+        {
+            seconds--;
+        }
+  obj.display.value = seconds;
+}</script>
+</head>
+<body>
+    <form id="timer" action="#">
+<p><input type="number" name="display"  size="
+    20" value="30" /></p>
+<p><input type="button" value="Bắt đầu"
+    onclick="Id=setInterval('startTimer()', 1000)" />
+</form>
+</script>
+</body>
+</html>
